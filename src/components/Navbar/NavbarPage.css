@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+  .form-inline .form-control {
+    display: inline-block;
+    width: 400px !important;
+    vertical-align: middle;
+  }
+}
+
+.left {
+  position: relative;
+  left: 12px;
+  width: 45px;
+}
+
+.fa-2x {
+  font-size: 16px !important;
+}
