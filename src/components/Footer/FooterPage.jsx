@@ -61,37 +61,37 @@ class FooterPage extends React.Component {
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://twitter.com/creativetim"
-                  id="tooltip622135962"
+                  href=""
+                  id=""
                   target="_blank"
                 >
-                  <i className="fab fa-twitter" />
+                  <i className="" />
                 </Button>
-                <UncontrolledTooltip delay={0} target="tooltip622135962">
+                <UncontrolledTooltip delay={0} target="">
                   GOODREADS
                 </UncontrolledTooltip>
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://www.facebook.com/creativetim"
-                  id="tooltip230450801"
+                  href=""
+                  id=""
                   target="_blank"
                 >
-                  <i className="fab fa-facebook-square" />
+                  <i className="" />
                 </Button>
-                <UncontrolledTooltip delay={0} target="tooltip230450801">
+                <UncontrolledTooltip delay={0} target="">
                   Google Books
                 </UncontrolledTooltip>
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://dribbble.com/creativetim"
-                  id="tooltip318450378"
+                  href=""
+                  id=""
                   target="_blank"
                 >
-                  <i className="fab fa-dribbble" />
+                  <i className="" />
                 </Button>
-                <UncontrolledTooltip delay={0} target="tooltip318450378">
+                <UncontrolledTooltip delay={0} target="">
                   Follow us
                 </UncontrolledTooltip>
               </div>

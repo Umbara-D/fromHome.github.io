@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavbarPage.css"
 import {
-  Button,
   Collapse,
   DropdownToggle,
   DropdownMenu,
@@ -131,14 +130,7 @@ class NavbarPage extends React.Component {
               
               <NavItem className="p-0">
                 {/* <NavLink
-                  data-placement="bottom"
-                  href="https://twitter.com/CreativeTim"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Follow us on Twitter"
-                >
-                  <i className="fab fa-twitter" />
-                  <p className="d-lg-none d-xl-none">Twitter</p>
+                  
                 </NavLink> */}
               </NavItem>
               <NavItem to="/"
@@ -169,26 +161,6 @@ class NavbarPage extends React.Component {
                   </DropdownItem>     
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {/* <NavItem>
-               <Button
-                 className="nav-link d-none d-lg-block"
-                 color="primary"
-                 target="_blank"
-                 href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
-               >
-                 <i className="tim-icons icon-spaceship" /> Upgrade to PRO
-               </Button>
-             </NavItem> */}
-             
-              {/* <NavItem>
-                <Button
-                  className="nav-link d-none d-lg-block"
-                  color="default"
-                  onClick={this.scrollToDownload}
-                >
-                  <i className="tim-icons icon-cloud-download-93" /> Download
-                </Button>
-              </NavItem> */}
             </Nav>
             <Form className="form-inline ml-auto">
                 <FormGroup className="no-border">
