@@ -7,7 +7,7 @@ import {
 import NavbarPage from '../../components/Navbar/NavbarPage'
 import FooterPage from '../../components/Footer/FooterPage'  
 
-import './card.css'
+import './BookCard.css'
 
 class BookCard extends Component {
   state={

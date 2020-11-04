@@ -15,7 +15,6 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
   Form,
   FormGroup,
   Input
@@ -129,17 +128,12 @@ class NavbarPage extends React.Component {
             <Nav navbar>
               
               <NavItem className="p-0">
-                {/* <NavLink
-                  
-                </NavLink> */}
               </NavItem>
               <NavItem to="/"
               tag={Link}>
                 <NavLink>
                 <p>Home</p>
-
                 </NavLink>
-
               </NavItem>
               <UncontrolledDropdown nav>
                 <DropdownToggle
@@ -155,7 +149,7 @@ class NavbarPage extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem to="/book"
-              tag={Link}>
+                    tag={Link}>
                     <i className="tim-icons icon-paper" />
                     My Books
                   </DropdownItem>     
@@ -166,10 +160,8 @@ class NavbarPage extends React.Component {
                 <FormGroup className="no-border">
                   <div className="input-group-prepend">
                     <span className="input-group-text left">
-                  <i className="fa fa-search fa-2x"></i>
-
+                    <i className="fa fa-search fa-2x"></i>
                     </span>
-
                   </div>
                   <Input placeholder="Search your favorite books" type="text" />
                 </FormGroup>
