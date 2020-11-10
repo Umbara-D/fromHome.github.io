@@ -5,7 +5,7 @@ import HeaderPage from '../components/Header/HeaderPage.jsx'
 import FooterPage from '../components/Footer/FooterPage.jsx'
 
 import JumbotronPage from './Home/JumbotronPage.jsx'
-import Recommend from './Home/Recommend.jsx';
+// import Recommend from './Home/Recommend.jsx';
 
 
 
@@ -25,7 +25,7 @@ class Index extends React.Component {
           <HeaderPage/>
           <div className="main">
             <JumbotronPage/>
-            <Recommend/>
+            {/* <Recommend/> */}
           </div>
         </div>
         <FooterPage/>
