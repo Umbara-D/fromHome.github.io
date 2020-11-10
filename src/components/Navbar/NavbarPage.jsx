@@ -132,23 +132,8 @@ class NavbarPage extends React.Component {
               <NavItem to="/"
               tag={Link}>
                 <NavLink>
-<<<<<<< HEAD
-                <p>Beranda</p>
-
-                </NavLink>
-              </NavItem>
-
-              <NavItem className="p-0">
-              </NavItem>
-              <NavItem to="/tentangkami"
-              tag={Link}>
-                <NavLink>
-                <p>Tentang Kami</p>
-                </NavLink>
-=======
                 <p>Home</p>
                 </NavLink>
->>>>>>> 2ac86e322633269a513cc8af51702d1c0b6268e9
               </NavItem>
               
               <UncontrolledDropdown nav>
