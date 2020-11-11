@@ -1,13 +1,8 @@
 import React from 'react';
-import classnames from "classnames";
+import { Link } from 'react-router-dom'
+// import classnames from "classnames";
 
 import {
-  Badge,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
   Col,
   Card,
   CardBody
@@ -30,11 +25,14 @@ class SearchResult extends React.Component {
 
   render() {
     return (
+      
       <Col lg="3">
         <Card>
           <CardBody>
             <img src={this.props.cover} alt=""/>
+        <Link to={`/books/${this.props.id}`}>
             <h3>{this.props.title}</h3>
+      </Link>
             <p>{this.props.author}</p>
             <p>{this.props.publishYear}</p>
           </CardBody>

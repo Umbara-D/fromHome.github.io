@@ -5,12 +5,9 @@ import request from 'superagent';
 import NavbarPage from '../components/Navbar/NavbarPage.jsx'
 import HeaderPage from '../components/Header/HeaderPage.jsx'
 import FooterPage from '../components/Footer/FooterPage.jsx'
-
 import JumbotronPage from './Home/JumbotronPage.jsx'
 import SearchResultList from './Search/SearchResultList.jsx';
 import Tabs from './Home/Tabs.jsx';
-
-
 
 class Index extends React.Component {
   constructor(props) {
@@ -20,7 +17,6 @@ class Index extends React.Component {
       searchField: ''
     };
   } 
-
   
   searchBook = (e) => {
     e.preventDefault();

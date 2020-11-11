@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
-  Card, CardImg, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle, Row, Col, Container 
+  Card, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle, Row, Container 
 } from 'reactstrap';
 
 import NavbarPage from '../../components/Navbar/NavbarPage'
@@ -10,7 +10,7 @@ import FooterPage from '../../components/Footer/FooterPage'
 import './BookCard.css'
 
 class BookCard extends Component {
-  state={
+  state = {
     dataUser: [],
     loading: true,
     error: false
@@ -50,7 +50,7 @@ class BookCard extends Component {
             <CardTitle>{user.volumeInfo.title}</CardTitle>
             <CardSubtitle>{user.volumeInfo.subtitle}</CardSubtitle>
           </CardBody>
-          <img width="100%" src="logo.svg" alt="Card image cap" />
+          {/* <img width="100%" src="logo.svg" alt="Card image cap" /> */}
           <CardBody>
             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
             <CardLink href="#">Card Link</CardLink>

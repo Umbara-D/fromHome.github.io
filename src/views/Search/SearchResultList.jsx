@@ -10,6 +10,7 @@ const SearchResultList = (props) => {
         {
           props.books.map((book, i) => {
             return <SearchResult
+                        id={book.accessInfo.id}
                         key={i}
                         cover={((book.volumeInfo.imageLinks) ? book.volumeInfo.imageLinks.thumbnail : undefined)}
                         title={book.volumeInfo.title}

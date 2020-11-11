@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavbarPage.css"
 import {
-  Button,
   Collapse,
   DropdownToggle,
   DropdownMenu,
@@ -16,7 +15,6 @@ import {
   Container,
   Row,
   Col,
-  // UncontrolledTooltip,
   Form,
   FormGroup,
   Input
