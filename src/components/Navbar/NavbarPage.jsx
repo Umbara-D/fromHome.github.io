@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavbarPage.css"
 import {
+  Button,
   Collapse,
   DropdownToggle,
   DropdownMenu,
@@ -15,6 +16,7 @@ import {
   Container,
   Row,
   Col,
+  // UncontrolledTooltip,
   Form,
   FormGroup,
   Input
@@ -128,11 +130,27 @@ class NavbarPage extends React.Component {
             <Nav navbar>
               
               <NavItem className="p-0">
+                {/* <NavLink
+                  data-placement="bottom"
+                  href="https://twitter.com/CreativeTim"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Follow us on Twitter"
+                >
+                  <i className="fab fa-twitter" />
+                  <p className="d-lg-none d-xl-none">Twitter</p>
+                </NavLink> */}
               </NavItem>
               <NavItem to="/"
               tag={Link}>
                 <NavLink>
-                <p>Home</p>
+                <p>Beranda</p>
+                </NavLink>
+              </NavItem>
+              <NavItem to="/tentang"
+              tag={Link}>
+                <NavLink>
+                <p>Tentang Kami</p>
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav>
@@ -145,25 +163,52 @@ class NavbarPage extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="fa fa-cogs d-lg-none d-xl-none" />
-                  Browse
+                  Kategori
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem to="/book"
-                    tag={Link}>
+              tag={Link}>
                     <i className="tim-icons icon-paper" />
                     My Books
-                  </DropdownItem>     
+                  </DropdownItem>    
+                  <DropdownItem to="/card"
+              tag={Link}>
+                    <i className="tim-icons icon-paper" />
+                    My Books Details
+                  </DropdownItem>   
                 </DropdownMenu>
               </UncontrolledDropdown>
+              {/* <NavItem>
+               <Button
+                 className="nav-link d-none d-lg-block"
+                 color="primary"
+                 target="_blank"
+                 href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
+               >
+                 <i className="tim-icons icon-spaceship" /> Upgrade to PRO
+               </Button>
+             </NavItem> */}
+             
+              {/* <NavItem>
+                <Button
+                  className="nav-link d-none d-lg-block"
+                  color="default"
+                  onClick={this.scrollToDownload}
+                >
+                  <i className="tim-icons icon-cloud-download-93" /> Download
+                </Button>
+              </NavItem> */}
             </Nav>
-            <Form className="form-inline ml-auto">
+            <Form onSubmit={this.props.searchBook} className="form-inline ml-auto">
                 <FormGroup className="no-border">
                   <div className="input-group-prepend">
                     <span className="input-group-text left">
-                    <i className="fa fa-search fa-2x"></i>
+                  <i className="fa fa-search fa-2x"></i>
+
                     </span>
+
                   </div>
-                  <Input placeholder="Search your favorite books" type="text" />
+                  <Input onChange={this.props.handleSearch}  placeholder="Search your favorite books" type="text" />
                 </FormGroup>
               </Form>
           </Collapse>

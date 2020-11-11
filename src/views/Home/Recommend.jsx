@@ -1,41 +1,44 @@
-import React from 'react';
-// import "./Recommend.css"
+// import React, { Component } from 'react';
+// import { getRecommendedBooks } from '../../utils/bookAPI';
+// // import JumbotronPage from './JumbotronPage';
 
-// import { 
-//   Button, 
-//   Container, 
-//   Col, 
-//   Row,
-//   Card,
-//   CardBody
-//   } from 'reactstrap';
+// class Recommended extends Component {
 
-class Recommend extends React.Component {
-  constructor(props){
-    super(props)
+//     constructor() {
+//         super();
 
-  this.state = {
-      items: []
-    }
-  }
+//         this.state = {
+//             recommendedBooks: [],
+//             isLoaded: false
+//         }
+//     }
 
-  componentDidMount() {
-    fetch("https://www.googleapis.com/books/v1/volumes?q=search-terms&key=AIzaSyA3hCWg9x8EHykTS1KvrbnKe0O7tyyhGds")
-    .then(response => response.json())
-    .then(data => this.setState({
-      items: data
-    }))
-  }
+//     componentDidMount() {
+//         getRecommendedBooks().then((recommendedBooks) => {
+//             this.setState({ recommendedBooks: recommendedBooks.items, isLoaded: true });
+//         });
+//     }
 
+//     render() {
+//         const { isLoaded, recommendedBooks } = this.state;
+//         if (!isLoaded) {
+//             return (<div className="">
+//                         aaaa
+//                     </div>);
+//         } else {
+//             return (
+//                 <div>
+//                     <header>
+//                         <h3>Recommended books</h3>
+//                     </header>
+//                     console.log({recommendedBooks})
 
-  render() {
-    console.log(this.state.items)
-    return (
-      <div>
-      </div>
-    );
-  }
-}
+//                     {/* <JumbotronPage books={recommendedBooks} /> */}
+//                 </div>
+//             );
+//         }
 
+//     }
+// }
 
-export default Recommend;
+// export default Recommended;
