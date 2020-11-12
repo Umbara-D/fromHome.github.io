@@ -6,6 +6,7 @@ import {
   Card,
   CardBody
 } from "reactstrap";
+import BookDetail from '../Book/BookDetail/BookDetail';
 
 class SearchResult extends React.Component {
   constructor(props) {
@@ -36,7 +37,9 @@ class SearchResult extends React.Component {
             <p>{this.props.author}</p>
             <p>{this.props.publishYear}</p>
           </CardBody>
-          
+          <Link className ="btn btn-primary" href="#">
+            Detail Buku
+          </Link>
         </Card>
       </Col>
      );
