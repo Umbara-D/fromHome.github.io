@@ -9,7 +9,6 @@ import {
   Card,
   CardBody
   } from 'reactstrap';
-  
 import FooterPage from '../../components/Footer/FooterPage';
 import NavbarPage from '../../components/Navbar/NavbarPage';
 

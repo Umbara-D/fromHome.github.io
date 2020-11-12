@@ -9,7 +9,7 @@ import './index.css';
 import "./assets/scss/blk-design-system-react.scss?v=1.1.0";
 import "./assets/vendor/font-awesome/css/font-awesome.min.css";
 // import "./assets/demo/demo.css";
-import "./assets/css/nucleo-icons.css";
+// import "./assets/css/nucleo-icons.css";
 
 ReactDOM.render(
   <React.StrictMode>

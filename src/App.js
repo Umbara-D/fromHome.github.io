@@ -13,6 +13,12 @@ import SearchResultList from './views/Search/SearchResultList.jsx';
 import Recommended from './views/Recommended/Recommended.jsx';
 import BookDetail from './views/Book/BookDetail/BookDetail.jsx';
 
+import BookCard from "./views/Browse/BookCard.jsx";
+import TentangKami from "./views/Browse/TentangKami.jsx";
+import SearchResultList from './views/Search/SearchResultList.jsx';
+import Recommended from './views/Recommended/Recommended.jsx';
+import BookDetail from './views/Book/BookDetail/BookDetail.jsx';
+
 function App() { //stateless component
   return ( 
     <>
