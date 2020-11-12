@@ -36,6 +36,7 @@ class SearchResult extends React.Component {
             <p>{this.props.author}</p>
             <p>{this.props.publishYear}</p>
           </CardBody>
+          
         </Card>
       </Col>
      );
