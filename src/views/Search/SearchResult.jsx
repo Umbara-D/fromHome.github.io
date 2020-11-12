@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-// import classnames from "classnames";
 
 import {
   Col,
@@ -25,14 +24,15 @@ class SearchResult extends React.Component {
 
   render() {
     return (
-      
       <Col lg="3">
         <Card>
           <CardBody>
             <img src={this.props.cover} alt=""/>
-        <Link to={`/books/${this.props.id}`}>
+            <Link to={`/book/${this.props.id}`}>
             <h3>{this.props.title}</h3>
-      </Link>
+            </Link>
+            <p>{this.props.id}</p>
+
             <p>{this.props.author}</p>
             <p>{this.props.publishYear}</p>
           </CardBody>

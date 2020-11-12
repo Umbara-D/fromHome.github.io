@@ -28,12 +28,14 @@ class NavbarPage extends React.Component {
       color: "navbar-transparent"
     };
   }
+
   componentDidMount() {
     window.addEventListener("scroll", this.changeColor);
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeColor);
   }
+  
   changeColor = () => {
     if (
       document.documentElement.scrollTop > 99 ||
@@ -51,22 +53,26 @@ class NavbarPage extends React.Component {
       });
     }
   };
+  
   toggleCollapse = () => {
     document.documentElement.classList.toggle("nav-open");
     this.setState({
       collapseOpen: !this.state.collapseOpen
     });
   };
+  
   onCollapseExiting = () => {
     this.setState({
       collapseOut: "collapsing-out"
     });
   };
+  
   onCollapseExited = () => {
     this.setState({
       collapseOut: ""
     });
   };
+  
   scrollToDownload = () => {
     document
       .getElementById("download-section")
@@ -87,7 +93,7 @@ class NavbarPage extends React.Component {
               tag={Link}
               id="navbar-brand"
             >
-              <span>Frome </span>
+              <span>From </span>
               Home
             </NavbarBrand>
             <button
@@ -111,7 +117,7 @@ class NavbarPage extends React.Component {
               <Row>
                 <Col className="collapse-brand" xs="6">
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    BLK•React
+                    From Home
                   </a>
                 </Col>
                 <Col className="collapse-close text-right" xs="6">
@@ -126,19 +132,6 @@ class NavbarPage extends React.Component {
               </Row>
             </div>
             <Nav navbar>
-              
-              <NavItem className="p-0">
-                {/* <NavLink
-                  data-placement="bottom"
-                  href="https://twitter.com/CreativeTim"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Follow us on Twitter"
-                >
-                  <i className="fab fa-twitter" />
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink> */}
-              </NavItem>
               <NavItem to="/"
               tag={Link}>
                 <NavLink>
@@ -151,64 +144,43 @@ class NavbarPage extends React.Component {
                 <p>Tentang Kami</p>
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  nav
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fa fa-cogs d-lg-none d-xl-none" />
-                  Kategori
-                </DropdownToggle>
-                <DropdownMenu className="dropdown-with-icons">
-                  <DropdownItem to="/book"
-              tag={Link}>
-                    <i className="tim-icons icon-paper" />
-                    My Books
-                  </DropdownItem>    
-                  <DropdownItem to="/card"
-              tag={Link}>
-                    <i className="tim-icons icon-paper" />
-                    My Books Details
-                  </DropdownItem>   
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              {/* <NavItem>
-               <Button
-                 className="nav-link d-none d-lg-block"
-                 color="primary"
-                 target="_blank"
-                 href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
-               >
-                 <i className="tim-icons icon-spaceship" /> Upgrade to PRO
-               </Button>
-             </NavItem> */}
-             
-              {/* <NavItem>
-                <Button
-                  className="nav-link d-none d-lg-block"
-                  color="default"
-                  onClick={this.scrollToDownload}
-                >
-                  <i className="tim-icons icon-cloud-download-93" /> Download
-                </Button>
-              </NavItem> */}
+              <NavItem>
+                <UncontrolledDropdown>
+                  <DropdownToggle
+                    caret
+                    color="default"
+                    data-toggle="dropdown"
+                    href="#pablo"
+                    nav
+                    onClick={e => e.preventDefault()}
+                  >
+                    <p>Kategori</p>
+                  </DropdownToggle>
+                  <DropdownMenu className="dropdown-with-icons">
+                    <DropdownItem to="/book"
+                      tag={Link}>
+                      <i className="tim-icons icon-paper" />
+                      My Books
+                    </DropdownItem>    
+                    <DropdownItem to="/card"
+                      tag={Link}>
+                      <i className="tim-icons icon-paper" />
+                      My Books Details
+                    </DropdownItem>   
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </NavItem>
             </Nav>
             <Form onSubmit={this.props.searchBook} className="form-inline ml-auto">
-                <FormGroup className="no-border">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text left">
-                  <i className="fa fa-search fa-2x"></i>
-
-                    </span>
-
-                  </div>
-                  <Input onChange={this.props.handleSearch}  placeholder="Search your favorite books" type="text" />
-                </FormGroup>
-              </Form>
+              <FormGroup className="no-border">
+                <div className="input-group-prepend">
+                  <span className="input-group-text left">
+                    <i className="fa fa-search fa-2x"></i>
+                  </span>
+                  <Input onChange={this.props.handleSearch} placeholder="Search your favorite books" type="text"/>
+                </div>
+              </FormGroup>
+            </Form>
           </Collapse>
         </Container>
       </Navbar>

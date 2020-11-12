@@ -8,6 +8,9 @@ import FooterPage from '../components/Footer/FooterPage.jsx'
 import JumbotronPage from './Home/JumbotronPage.jsx'
 import SearchResultList from './Search/SearchResultList.jsx';
 import Tabs from './Home/Tabs.jsx';
+import BookDetail from './Book/BookDetail/BookDetail.jsx';
+import BookDetailList from './Book/BookDetail/BookDetailList.jsx';
+// import Recommended from './Recommended/Recommended.jsx';
 
 class Index extends React.Component {
   constructor(props) {
@@ -49,13 +52,14 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <NavbarPage searchBook = {this.searchBook} handleSearch={this.handleSearch}/>
+        <NavbarPage searchBook = {this.searchBook} handleSearch ={this.handleSearch}/>
         <div className="wrapper">
           <HeaderPage/>
           <div className="main">
             <JumbotronPage/>
-            <SearchResultList books={this.state.books}/>
+            <SearchResultList books ={this.state.books}/>
             <Tabs/>
+            {/* <Recommended/> */}
           </div>
         </div>
         <FooterPage/>
