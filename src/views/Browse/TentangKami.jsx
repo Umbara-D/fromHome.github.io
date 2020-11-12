@@ -20,7 +20,7 @@ const TentangKami = (props) => {
         <CardBody>
           <Row>
             <Col lg="9">
-              <h1 className="display-3 card-title">Tentang Kami</h1>
+              <h1 className="display-3 card-title">TENTANG KAMI</h1>
               <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, perferendis fugiat totam nulla enim minus molestiae nisi possimus officia nam?</p>
               <hr className="my-2" />
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi magnam voluptatum nemo quidem ullam ex! Autem dolores nostrum recusandae. Repellendus.</p>
