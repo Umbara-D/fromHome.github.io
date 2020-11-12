@@ -1,0 +1,14 @@
+img {
+  /* width: 100%; */
+  min-width: 200px !important;
+  text-align: center;
+}
+
+.edit {
+  min-height: 600px;
+  max-height: 600px;
+}
+
+.img-edit {
+  min-height: 310px;
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import "./SearchResult.css"
 
 import {
   Col,
   Card,
-  CardBody
+  CardBody,
+  CardImg
 } from "reactstrap";
 
 class SearchResult extends React.Component {
@@ -25,14 +27,14 @@ class SearchResult extends React.Component {
   render() {
     return (
       <Col lg="3">
-        <Card>
+        <Card className="edit">
           <CardBody>
-            <img src={this.props.cover} alt=""/>
+            <div className="text-center pb-3 img-edit">
+              <img src={this.props.cover} alt=""/>
+            </div>
             <Link to={`/book/${this.props.id}`}>
-            <h3>{this.props.title}</h3>
+              <h3>{this.props.title}</h3>
             </Link>
-            <p>{this.props.id}</p>
-
             <p>{this.props.author}</p>
             <p>{this.props.publishYear}</p>
           </CardBody>

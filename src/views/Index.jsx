@@ -8,9 +8,6 @@ import FooterPage from '../components/Footer/FooterPage.jsx'
 import JumbotronPage from './Home/JumbotronPage.jsx'
 import SearchResultList from './Search/SearchResultList.jsx';
 import Tabs from './Home/Tabs.jsx';
-import BookDetail from './Book/BookDetail/BookDetail.jsx';
-import BookDetailList from './Book/BookDetail/BookDetailList.jsx';
-// import Recommended from './Recommended/Recommended.jsx';
 
 class Index extends React.Component {
   constructor(props) {
@@ -35,7 +32,7 @@ class Index extends React.Component {
   }
 
   handleSearch = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
 
     this.setState ({
       searchField: e.target.value
@@ -59,7 +56,6 @@ class Index extends React.Component {
             <JumbotronPage/>
             <SearchResultList books ={this.state.books}/>
             <Tabs/>
-            {/* <Recommended/> */}
           </div>
         </div>
         <FooterPage/>
