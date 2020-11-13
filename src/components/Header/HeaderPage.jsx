@@ -20,6 +20,8 @@ import React from "react";
 // reactstrap components
 import { Container } from "reactstrap";
 
+// import './HeaderPage.css'
+
 class HeaderPage extends React.Component {
   render() {
     return (
@@ -31,7 +33,7 @@ class HeaderPage extends React.Component {
         <div className="squares square5" />
         <div className="squares square6" />
         <div className="squares square7" /> */}
-        <Container>
+        <Container className="this">
           <div className="content-center brand">
             <h1 className="h1-seo">From Home</h1>
             <p></p>

@@ -17,7 +17,10 @@ import {
   Col,
   Form,
   FormGroup,
-  Input
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  Button
 } from "reactstrap";
 
 class NavbarPage extends React.Component {
@@ -132,28 +135,19 @@ class NavbarPage extends React.Component {
               </Row>
             </div>
             <Nav navbar>
-              <NavItem to="/"
-              tag={Link}>
+              <NavItem to="/" tag={Link}>
                 <NavLink>
-                <p>Beranda</p>
+                  <p>Beranda</p>
                 </NavLink>
               </NavItem>
-              <NavItem to="/tentang"
-              tag={Link}>
+              <NavItem to="/tentang" tag={Link}>
                 <NavLink>
-                <p>Tentang Kami</p>
+                  <p>Tentang Kami</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <UncontrolledDropdown>
-                  <DropdownToggle
-                    caret
-                    color="default"
-                    data-toggle="dropdown"
-                    href="#pablo"
-                    nav
-                    onClick={e => e.preventDefault()}
-                  >
+                  <DropdownToggle caret color="default" data-toggle="dropdown" href="#pablo" nav onClick={e => e.preventDefault()}>
                     <p>Kategori</p>
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-with-icons">
@@ -173,12 +167,15 @@ class NavbarPage extends React.Component {
             </Nav>
             <Form onSubmit={this.props.searchBook} className="form-inline ml-auto">
               <FormGroup className="no-border">
-                <div className="input-group-prepend">
-                  <span className="input-group-text left">
+                {/* <div className="input-group-prepend"> */}
+                  {/* <span className="input-group-text left">
                     <i className="fa fa-search fa-2x"></i>
-                  </span>
+                  </span> */}
+                  <InputGroup>
+                  {/* <InputGroupAddon addonType="prepend" ><Button>Cari Buku</Button></InputGroupAddon> */}
                   <Input onChange={this.props.handleSearch} placeholder="Search your favorite books" type="text"/>
-                </div>
+                  </InputGroup>
+                {/* </div> */}
               </FormGroup>
             </Form>
           </Collapse>

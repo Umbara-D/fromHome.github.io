@@ -1,41 +1,42 @@
-import React from 'react';
+import React from "react";
 // import { Link } from 'react-router-dom';
-import { getBook } from '../../../utils/bookAPI'
+import { getBook } from "../../../utils/bookAPI";
 
-import {
-  Col,
-  Card,
-  CardBody
-} from "reactstrap";
+import { Col, Card, CardBody } from "reactstrap";
 
 class BookDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       bookInfo: {},
-      id: this.props.match.params.id
+      id: this.props.match.params.id,
     };
-  } 
-  
+  }
+
   componentDidMount() {
-    let id = this.state.id
+    let id = this.state.id;
 
-    getBook(id)
-    .then((bookInfo) => {
-        this.setState({ bookInfo: bookInfo.volumeInfo, bookId: bookInfo.id, isLoaded: true });
+    getBook(id).then((bookInfo) => {
+      this.setState({
+        bookInfo: bookInfo.volumeInfo,
+        bookId: bookInfo.id,
+        isLoaded: true,
+      });
     });
-}
-
-
+  }
 
   render() {
     const { bookInfo } = this.state;
     const { classes } = this.props;
 
     function getSmallImage(bookInfo) {
-      let bookImageUrl = bookInfo.imageLinks && (bookInfo.imageLinks.small || bookInfo.imageLinks.thumbnail);
-      return bookImageUrl ? bookImageUrl.replace(/^http:\/\//i, 'https://') : '';
-    } 
+      let bookImageUrl =
+        bookInfo.imageLinks &&
+        (bookInfo.imageLinks.small || bookInfo.imageLinks.thumbnail);
+      return bookImageUrl
+        ? bookImageUrl.replace(/^http:\/\//i, "https://")
+        : "";
+    }
 
     return (
       <Col lg="3">
@@ -48,7 +49,7 @@ class BookDetail extends React.Component {
           </CardBody>
         </Card>
       </Col>
-     );
+    );
   }
 }
 

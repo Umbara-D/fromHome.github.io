@@ -1,5 +1,6 @@
 import React from 'react';
-import "./TentangKami.css"
+import Person from "./Person.jsx";
+import "./TentangKami.css";
 
 import { 
   Container, 
@@ -16,7 +17,7 @@ const TentangKami = (props) => {
     <div className="section1">
       <NavbarPage/>
       <Container>
-      <Card>
+        <Card>
         <CardBody>
           <Row>
             <Col lg="9">
@@ -25,11 +26,16 @@ const TentangKami = (props) => {
               <hr className="my-2" />
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi magnam voluptatum nemo quidem ullam ex! Autem dolores nostrum recusandae. Repellendus.</p>
             </Col>
-            <Col lg="3">
-            </Col>
+            <Col lg="3"> </Col>
           </Row>
         </CardBody>
-      </Card>
+        </Card>
+
+        <Card>
+          <CardBody>
+            <Person />
+          </CardBody>
+        </Card>
       </Container>
       <FooterPage/>
     </div>

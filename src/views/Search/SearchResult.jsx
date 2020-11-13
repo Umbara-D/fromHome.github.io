@@ -1,24 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import {
-  Col,
-  Card,
-  CardBody
-} from "reactstrap";
+import { Col, Card, CardBody } from "reactstrap";
 
 class SearchResult extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pills: 1
+      pills: 1,
     };
-  } 
+  }
 
   toggleTabs = (e, stateName, index) => {
     e.preventDefault();
     this.setState({
-      [stateName]: index
+      [stateName]: index,
     });
   };
 
@@ -27,9 +23,9 @@ class SearchResult extends React.Component {
       <Col lg="3">
         <Card>
           <CardBody>
-            <img src={this.props.cover} alt=""/>
+            <img src={this.props.cover} alt="" />
             <Link to={`/book/${this.props.id}`}>
-            <h3>{this.props.title}</h3>
+              <h3>{this.props.title}</h3>
             </Link>
             <p>{this.props.id}</p>
 
@@ -38,7 +34,7 @@ class SearchResult extends React.Component {
           </CardBody>
         </Card>
       </Col>
-     );
+    );
   }
 }
 
