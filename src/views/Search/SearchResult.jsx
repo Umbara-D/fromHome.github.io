@@ -6,7 +6,7 @@ import {
   Col,
   Card,
   CardBody,
-  CardImg
+  // CardImg
 } from "reactstrap";
 
 class SearchResult extends React.Component {
